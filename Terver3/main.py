@@ -13,7 +13,7 @@ for i in range(len(zp)):
 sr = sum/len(zp)
 sum = 0
 for i in range(len(zp)):
-      sum = (zp[i] - sr)**2
+      sum += (zp[i] - sr)**2
 ds = sum/len(zp)
 dn = sum/(len(zp) - 1)
 qs = ds**0.5
