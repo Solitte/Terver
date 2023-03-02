@@ -51,8 +51,8 @@ for i in range(len(x)):
       sum += (x[i] - xmean)**2
 d = sum/(len(x) - 1)
 tn = (xmean - m0) / (d / n)**0.5
-tkr1 = s.norm.ppf(a / 2)
-tkr2 = s.norm.ppf(1 - a / 2)
+tkr1 = s.t.ppf(a / 2, n-1)
+tkr2 = s.t.ppf(1 - a / 2, n-1)
 print('Задача 3.')
 print(f'tn - {tn}, tkr1 - {tkr1}, tkr2 - {tkr2}')
 if tkr1 < tn < tkr2:
@@ -70,7 +70,7 @@ else:
 x = np.array([172, 177, 158, 170, 178,175, 164, 160, 169, 165])
 y = np.array([173, 175, 162, 174, 175, 168, 155, 170, 160, 163])
 a = 0.05
-tn = s.ttest_ind(x, y)
+tn = s.ttest_rel(x,y)
 print('Задача 4.')
 print(tn)
 pvalue = tn[1]
