@@ -70,7 +70,7 @@ else:
 x = np.array([172, 177, 158, 170, 178,175, 164, 160, 169, 165])
 y = np.array([173, 175, 162, 174, 175, 168, 155, 170, 160, 163])
 a = 0.05
-tn = s.ttest_rel(x,y)
+tn = s.ttest_rel(x, y)
 print('Задача 4.')
 print(tn)
 pvalue = tn[1]
