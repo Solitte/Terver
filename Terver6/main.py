@@ -44,9 +44,9 @@ xmean = np.mean(x)
 ymean = np.mean(y)
 nx = len(x)
 ny = len(y)
-dx = np.var(x, ddof=nx - 1)
-dy = np.var(y, ddof=ny - 1)
-ta = s.t.ppf(1 - a / 2, nx - 1)
+dx = np.var(x, ddof=1)
+dy = np.var(y, ddof=1)
+ta = s.t.ppf(1 - a / 2, 2*(nx - 1))
 d = 0.5 * (dx + dy)
 sd = (d / nx + d / ny)**0.5
 delta = ymean - xmean
