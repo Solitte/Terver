@@ -18,8 +18,7 @@ cov = np.mean(zp*ks) - np.mean(zp) * np.mean(ks)
 print('Задача 1.')
 print(f'а) cov = {round(cov, 2)}')
 print(f'б) cov = {np.cov(zp, ks, ddof=0)}')
-''' ddof=0 will return the simple average. https://numpy.org/doc/stable/reference/generated/numpy.cov.html'''
-print(f'в) rzp_ks = {cov / (np.std(zp, ddof=1) * np.std(ks, ddof=1))}')
+print(f'в) rzp_ks = {cov / (np.std(zp, ddof=0) * np.std(ks, ddof=0))}')
 print(f'г) rzp_ks = {np.corrcoef(zp, ks)}')
 
 '''
