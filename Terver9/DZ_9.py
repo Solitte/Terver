@@ -28,7 +28,7 @@ x = np.array([35, 45, 190, 200, 40, 70, 54, 150, 120, 110])
 y = np.array([401, 574, 874, 919, 459, 739, 653, 902, 746, 832])
 def mse(b1, y = y, x = x, n = len(x)):
     return np.sum((b1 * x - y)**2) / n
-a = 1e-6
+a = 1e-5*7
 b1 = 0.1
 while True:
     mse_last = mse(b1)
